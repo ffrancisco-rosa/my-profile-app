@@ -3,5 +3,5 @@ class Project < ApplicationRecord
   validates :description, presence: true
   validates :live_version, presence: true
   validates :github_version, presence: true
-  has_many :attached, :photos
+  has_many_attached :photos
 end
