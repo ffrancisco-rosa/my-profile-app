@@ -6,23 +6,32 @@ class PostPolicy < ApplicationPolicy
   end
 
   def new
-    true
+    check_user
   end
 
   def create?
-    return true
+    check_user
   end
 
   def edit
-
+    check_user
   end
 
   def update?
-
+    check_user
   end
 
   def destroy?
-
+    check_user
   end
 
+  private
+
+  def check_user
+    if record.user == current_user
+      true
+    else
+      false
+    end
+  end
 end
