@@ -1,17 +1,16 @@
-<div class="container">
-  <div class="row">
-    <div class="card mb-3">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">About</h5>
-        <p class="card-text">Having worked as a full time pharmacy technician the last 3 years, I am now a Full-Stack Ruby on Rails Web Developer after completing Le Wagon full-stack program in Lisbon.
-I am passionate about programming, technology and excited to start my professional career in  IT.
-Available for projects in Lisbon  and Algarve area.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="projects">
+<div class="top">
+  <div class="container _head-main">
+  <%= render 'shared/navbar' %>
 
-    </div>
+          <div class="homepage-info">
+          <h1 class="h1">Francisco Rosa</h1>
+          <h3>Web Developer</h3>
+          <div>
+            <%= button_to "Projects" %>
+          </div>
+        </div>
+      <div class="main-info">
+        <%= cl_image_tag("profile-pic", heigth: "100%", width: 200) %>
+      </div>
   </div>
 </div>

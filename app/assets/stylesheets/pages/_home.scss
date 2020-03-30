@@ -1,1 +1,40 @@
-// Specific CSS for your home-page
+.top {
+  // background-color: #382F76;
+  background-color: #557a95;
+  height: 100%;
+}
+
+.main-info {
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  z-index: 0.5;
+}
+.homepage-info {
+  position: relative;
+  top: 230px;
+  margin-bottom: 0;
+   z-index: 1;
+    h1 {
+      margin-left: 32px;
+      color: black;
+    }
+}
+
+.main-info, img {
+  height: 80%;
+  width: 80%;
+  text-align: left;
+  line-height: 16px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-size: 8px;
+  border-color: rgb(255, 255, 255);
+  border-style: none;
+  margin: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  position: relative;
+  left: 17%;
+  top: -40px;
+}
