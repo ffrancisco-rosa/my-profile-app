@@ -1,0 +1,37 @@
+<div class="row _row-all">
+  <div class="col-sm-9">
+    <div class="blog-post">
+      <div class="post-title">
+        <h3> <%= @project.title %> </h3>
+
+        <div class="row poster-info">
+          <div class="col">
+
+          </div>
+          <div class="col">
+
+          </div>
+        </div>
+      </div>
+      <div class="tldr">
+        <h4>TL:DR</h4>
+        <p>bunch of info fffffffffffffffffffff
+        ffffffffffffffffffffffffffffffffffffffff
+      ffffffffffffffffffffffffffffffffff</p>
+      </div>
+      <div class="main-pic" >
+        <%= cl_image_tag(@project.thumbnail.key, scale: "fill", class: "img-fluid") %>
+      </div>
+      <div class="project-text">
+         <p> <%= @project.text %> </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <h4>Recent Posts</h4>
+
+    <div>
+      <p>bullshit card</p>
+    </div>
+  </div>
+</div>
