@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :find, only: [:show, :edit, :update, :destroy]
   def index
-    @posts = Post.all
+    @posts = policy_scope(Post)
   end
 
   def show

@@ -12,11 +12,11 @@ class PostPolicy < ApplicationPolicy
   end
 
   def new
-    check_user
+    true
   end
 
   def create?
-    check_user
+    true
   end
 
   def edit

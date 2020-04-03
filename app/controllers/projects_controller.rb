@@ -13,10 +13,11 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+    @project.user_id = current_user.id
     if @project.save
       redirect_to project_path(@project)
     else
-      render :new
+      render :new, notice: "#{@project.errors.full_messages.join(" and ")}!!!"
     end
   end
 
@@ -43,6 +44,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:title, :description, :live_version, :github_version, photos: [])
+    params.require(:project).permit(:title, :text, :live_version, :github_version, :thumbnail)
   end
 end

@@ -36,3 +36,6 @@ document.addEventListener('turbolinks:load', () => {
 import { myNav } from "../scripts/navbar.js";
 
 // myNav
+
+require("trix")
+require("@rails/actiontext")

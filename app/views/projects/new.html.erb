@@ -1,0 +1,26 @@
+<div class="container">
+  <%= form_with scope: :project, url: projects_path, local: true do |f| %>
+    <p>
+      <%= f.label :title %> <br>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :live_version %> <br>
+      <%= f.text_field :live_version %>
+    </p>
+    <p>
+      <%= f.label :github_version %> <br>
+      <%= f.text_field :github_version %>
+    </p>
+    <p>
+      <%= f.label :thumbnail %>
+      <%= f.file_field :thumbnail %>
+    </p>
+    <p>
+      <%= f.label :text %> <br>
+      <%= f.rich_text_area :text %>
+    </p>
+    <p> <%= f.submit %> </p>
+
+  <% end %>
+</div>
