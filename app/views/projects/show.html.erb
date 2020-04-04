@@ -1,12 +1,13 @@
+<div class="container">
 <div class="row _row-all">
-  <div class="col-sm-9">
+  <div class="col-sm-10">
     <div class="blog-post">
       <div class="post-title">
         <h3> <%= @project.title %> </h3>
 
         <div class="row poster-info">
           <div class="col">
-
+            <%= @project.created_at.strftime("Posted on %b-%d-%Y") %>
           </div>
           <div class="col">
 
@@ -25,13 +26,21 @@
       <div class="project-text">
          <p> <%= @project.text %> </p>
       </div>
+      <div>
+        <div>
+          <h4> <%= @project.live_version %> </h4>
+          <h4> <%= @project.github_version %> </h4>
+        </div>
+        <%= link_to "Back to Projects", projects_path, class: "btn btn-danger" %>
+      </div>
     </div>
   </div>
-  <div class="col-sm-3">
-    <h4>Recent Posts</h4>
-
+  <div class="col-sm-2 links">
+    <h4> <%= @project.live_version %></h4>
+    <h4> <%= @project.github_version %></h4>
     <div>
-      <p>bullshit card</p>
+      <%= link_to "Back to Index", projects_path, class: "btn btn-secondary" %>
     </div>
   </div>
+</div>
 </div>
