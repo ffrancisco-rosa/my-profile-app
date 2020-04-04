@@ -1,16 +1,45 @@
+<!-- <div class="container">
+
+  <%# @projects.each do |project| %>
+  <div class="card" style="width: 18rem;">
+    <%#= cl_image_tag(project.thumbnail.key, class: "card-img-top p-2") %>
+    <div class="card-body">
+      <h5 class="card-title"> <%#= project.title %> </h5>
+      <p class="card-text"></p>
+    </div>
+      <a href="<%#= project.github_version %>" target="_blank"> Check Code</a>
+      <a href="<%#= project.live_version %>" target="_blank"> Live App</a>
+  </div>
+  <%# end %>
+</div> -->
+
 <div class="container">
   <% if user_signed_in? %>
     <%= link_to "New Project", new_project_path %>
   <% end %>
 
-  <% @projects.each do |project| %>
-  <div class="card" style="width: 18rem;">
-    <%= cl_image_tag(project.thumbnail.key, class: "card-img-top") %>
-    <div class="card-body">
-      <h5 class="card-title"> <%= project.title %> </h5>
-      <p class="card-text"></p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <h2>My Portfolio</h2>
+  <div class="cards">
+    <% @projects.each do |project| %>
+    <div class="card-container" style="background-color: white;">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(project.thumbnail.key) %>')">
+        <%= project.title %>
+      </div>
+      <div class="misc">
+        <a href="<%#= project.github_version %>" target="_blank"> Check Code</a><br>
+      </div>
+      <div class="misc">
+        <a href="<%#= project.live_version %>" target="_blank"> Live App</a><br>
+      </div>
+      <div class="misc">
+        <%= link_to "More Details", project_path(project) %>
+      </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
+
+  <h4>More to come!!!</h2>
 </div>
+
+
+

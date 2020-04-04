@@ -36,10 +36,11 @@
     </div>
   </div>
   <div class="col-sm-2 links">
-    <h4> <%= @project.live_version %></h4>
-    <h4> <%= @project.github_version %></h4>
+    <h4> <a href="<%= @project.live_version %>"> Live version</a> </h4>
+    <h4> <a href="<%= @project.github_version %>"> Live version</a> </h4>
+    <h4> <%= link_to "Back to Index", projects_path %> </h4>
     <div>
-      <%= link_to "Back to Index", projects_path, class: "btn btn-secondary" %>
+
     </div>
   </div>
 </div>
