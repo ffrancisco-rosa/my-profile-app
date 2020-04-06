@@ -3,28 +3,31 @@
 
     <div class="col-sm-6">
       <h2>About Me</h2>
-      <div class="About Text">
-
+      <div class="about-text mt-4">
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       </div>
     </div>
     <div class="col-sm-3">
       <h2>Recent Projects</h2>
-      <div class="projects-list">
+      <div class="projects-list mt-4">
         <% @projects.each do |project| %>
         <p> <%= project.title %></p>
         <p> # 346- Content Example</p>
         <p> # 346- Content Example</p>
         <% end %>
       </div>
-      <%= link_to "See More", projects_path, class: "btn btn-success btn-block" %>
+      <p> <%= link_to "Go to Projects", projects_path %> </p>
     </div>
-    <div class="col-sm-3">
-      <h2>Blog</h2>
-      <div class="blog-list">
+    <div class="col-sm-3 ">
+      <h2>Recent Posts</h2>
+      <div class="blog-list mt-4">
         <p> # 346- Content Example</p>
         <p> # 346- Content Example</p>
         <p> # 346- Content Example</p>
       </div>
-      <%= link_to "See More", posts_path, class: "btn btn-success btn-block" %>
+      <%= link_to "Go to Blog", posts_path %>
     </div>
   </div>

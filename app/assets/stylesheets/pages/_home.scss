@@ -3,8 +3,34 @@
   height: 100%;
   padding-left: 32px;
   padding-top: 32px;
-  h2 {
-    text-align: left;
+  color: black;
+    h2 {
+      text-align: left;
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: gray;
+    margin-bottom: -16px;
   }
+
+  .about-text {
+    p {
+      width: 100%;
+    }
+  }
+
+  div {
+    a {
+      text-decoration: none;
+      color: black;
+    }
+}
 
 }
