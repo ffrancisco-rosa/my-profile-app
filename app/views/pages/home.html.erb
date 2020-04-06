@@ -1,29 +1,30 @@
 
   <div class="row landin-content">
-    <div class="col-sm-8 image-land">
-      <%= image_tag("beautiful.jpg") %>
-    </div>
-    <div class="col-sm-4">
-      <br>
-      <br>
-      <br>
 
-      <h2>Francisco Rosa</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis bibendum ligula, et faucibus nibh. Nam vitae libero felis. Nulla eu justo nisl. Sed sodales, nisi id hendrerit aliquam, ante nulla fermentum est, at vestibulum velit nunc eget eros. Curabitur condimentum nisi nec feugiat consectetur. Curabitur sit amet egestas ante, non vehicula justo. Sed dapibus nulla nec quam dapibus, suscipit mollis ante tristique. Sed efficitur ornare eros, eget finibus purus ultrices at. Vivamus imperdiet ultrices nunc. Duis a suscipit velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-      <div class="row">
-        <div class="col-sm">
-          <%= link_to "Projects", projects_path %>
+    <div class="col-sm-6">
+      <h2>About Me</h2>
+      <div class="About Text">
 
-        </div>
-        <div class="col-sm">
-          <%= link_to "Contact", "#"  %>
-        </div>
       </div>
     </div>
-
+    <div class="col-sm-3">
+      <h2>Recent Projects</h2>
+      <div class="projects-list">
+        <% @projects.each do |project| %>
+        <p> <%= project.title %></p>
+        <p> # 346- Content Example</p>
+        <p> # 346- Content Example</p>
+        <% end %>
+      </div>
+      <%= link_to "See More", projects_path, class: "btn btn-success btn-block" %>
+    </div>
+    <div class="col-sm-3">
+      <h2>Blog</h2>
+      <div class="blog-list">
+        <p> # 346- Content Example</p>
+        <p> # 346- Content Example</p>
+        <p> # 346- Content Example</p>
+      </div>
+      <%= link_to "See More", posts_path, class: "btn btn-success btn-block" %>
+    </div>
   </div>
-
-
-
-<br>
-<br>

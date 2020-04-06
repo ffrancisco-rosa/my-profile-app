@@ -20,25 +20,28 @@
 
   <h2>My Portfolio</h2>
   <div class="cards">
-    <% @projects.each do |project| %>
-    <div class="card-container" style="background-color: white;">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path(project.thumbnail.key) %>')">
-        <%= project.title %>
+    <% @projects.each do |project|  %>
+      <div class="card-trip">
+        <%= cl_image_tag(project.thumbnail.key) %>
+        <div class="card-trip-infos">
+          <div>
+            <h2> <% project.title %> </h2>
+            <p>Short description here!</p>
+          </div>
+         </div>
+        <div class="misc">
+            <a href="<%= project.github_version %>" target="_blank"> Check Code</a><br>
+          </div>
+          <div class="misc">
+            <a href="<%= project.live_version %>" target="_blank"> Live App</a><br>
+          </div>
+<!--           <div class="misc">
+            <%#= link_to "More Details", project_path(project) %>
+          </div> -->
       </div>
-      <div class="misc">
-        <a href="<%#= project.github_version %>" target="_blank"> Check Code</a><br>
-      </div>
-      <div class="misc">
-        <a href="<%#= project.live_version %>" target="_blank"> Live App</a><br>
-      </div>
-      <div class="misc">
-        <%= link_to "More Details", project_path(project) %>
-      </div>
-    </div>
     <% end %>
   </div>
-
-  <h4>More to come!!!</h2>
+  <h5>More to come!!!</h5>
 </div>
 
 
