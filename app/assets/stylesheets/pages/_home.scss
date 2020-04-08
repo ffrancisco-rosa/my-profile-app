@@ -8,6 +8,7 @@
       text-align: left;
       position: relative;
       margin-bottom: 16px;
+      color: $blue-heavy;
     }
 
     h2::before {
@@ -16,14 +17,14 @@
     bottom: 0; left: 0;
     width: 50px;
     height: 2px;
-    background-color: gray;
+    background-color: $blue-nav-footer;
     margin-bottom: -16px;
   }
 
   .about-text {
     p {
 
-      font-size: 2vmin;
+      font-size: 16px;
     }
   }
 

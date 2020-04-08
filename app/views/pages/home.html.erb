@@ -1,31 +1,41 @@
-
   <div class="row landin-content">
 
     <div class="col-sm-6">
-      <h2>About Me</h2>
+      <h2>About</h2>
       <div class="about-text mt-4">
-        <p>Francisco Rosa é um gajo mesmo lindo de morrer.
-        É mesmo inacreditável o quão lindo ele é!</p>
+        <%#= image_tag('beautiful.jpg', width: '100%', height: 100) %>
+        <p class="pt-4">My name is Francisco Rosa and I'm a full-stack developer living in Lisbon, Portugal.<br>
+          <br>
+          Worked as a pharmacist technician for the last 3 years until I decided to go for a career change. <br>
+          <br>
+          Now, after attending <a href="https://www.lewagon.com/lisbon" target="_blank"><u><strong>Le Wagon bootcamp</strong></u></a> I'm designing and developing rails applications for myself and former colleagues. <br>
+          <br>
+          Love to read, share and debug code with others and improve my skills. <br>
+          <br>
+          <p><u> <%= link_to 'Contact Me', '#' %></u></p>
+        </p>
       </div>
     </div>
-    <div class="col-sm-3">
-      <h2>Recent Projects</h2>
-      <div class="projects-list mt-4">
-        <% @projects.each do |project| %>
-        <p> <%= project.title %></p>
-        <p> # 346- Content Example</p>
-        <p> # 346- Content Example</p>
-        <% end %>
+
+      <div class="col-sm-3">
+        <h2>Recent Projects</h2>
+        <div class="projects-list mt-4 pt-4">
+          <% @projects.each do |project| %>
+          <p> <%= project.title %></p>
+          <p> # 346- Content Example</p>
+          <p> # 346- Content Example</p>
+          <% end %>
+        </div>
+        <p> <%= link_to "Go to Projects", projects_path %> </p>
       </div>
-      <p> <%= link_to "Go to Projects", projects_path %> </p>
-    </div>
-    <div class="col-sm-3 ">
-      <h2>Recent Posts</h2>
-      <div class="blog-list mt-4">
-        <p> # 346- Content Example</p>
-        <p> # 346- Content Example</p>
-        <p> # 346- Content Example</p>
+      <div class="col-sm-3 ml-0">
+        <h2>Recent Posts</h2>
+        <div class="blog-list mt-4 pt-4">
+          <p> # 346- Content Example</p>
+          <p> # 346- Content Example</p>
+          <p> # 346- Content Example</p>
+        </div>
+        <%= link_to "Go to Blog", posts_path %>
       </div>
-      <%= link_to "Go to Blog", posts_path %>
-    </div>
+
   </div>
