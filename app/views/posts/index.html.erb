@@ -1,0 +1,29 @@
+<div class="container">
+
+  <h2>Posts</h2>
+<% raise %>
+
+   <% date = @posts.first.year %>
+   <% if date == post.year %>
+    <h3> <%= date %> </h3>
+    <% Post.where(year: date).each do |post| %>
+      <ul>
+      <li>
+        <%= post.title %>
+      </li>
+    </ul>
+    <% end %>
+  <% else %>
+    <h3> <%= date %> </h3>
+    <% Post.where(year: date).each do |post| %>
+      <ul>
+      <li>
+        <%= post.title %>
+      </li>
+    </ul>
+    <% end %>
+  <% end %>
+
+
+</div>
+

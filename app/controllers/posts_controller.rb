@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
   before_action :find, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
   def index
-    @posts = policy_scope(Post)
+    @posts = Post.order('year DESC')
   end
 
   def show
+    authorize @post
   end
 
   def new
@@ -13,6 +15,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    authorize @post
     if @post.save
       redirect_to post_path(@post)
     else
@@ -44,5 +47,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :content, photos: [])
+  end
+
+  def posts_year
+
   end
 end
